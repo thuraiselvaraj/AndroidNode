@@ -48,6 +48,11 @@ app.post('/signup', (req, res) => {
     });
 });
 
+
+app.get("/ping",(req,res)=>{
+    res.json({result:"pong",status:"working"}).end()
+})
+
 app.post('/login', (req, res) => {
     const query = {
          email: req.body.email, 
